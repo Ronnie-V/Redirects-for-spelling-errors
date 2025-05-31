@@ -8,7 +8,7 @@ debugMode = False
 def addToTable(text, pageTitle, usedSpellingError, targetPageTitle, preferredTextToDisplay, number):
   text += '|-\n'
   if number == 1:
-    text +=f'|[[{pageTitle}]]||[[Speciaal:VerwijzingenNaarHier/{usedSpellingError}&namespace=0&limit=5000|{usedSpellingError}]]||{targetPageTitle}||{preferredTextToDisplay}||{number}\n'
+    text +=f'|[[{pageTitle}]]||[[Speciaal:VerwijzingenNaarHier?namespace=0&limit=5000&target={usedSpellingError}|{usedSpellingError}]]||{targetPageTitle}||{preferredTextToDisplay}||{number}\n'
   else:
     text +=f'|[[{pageTitle}]]||{usedSpellingError}||{targetPageTitle}||{preferredTextToDisplay}||{number}\n'
   return (text)
